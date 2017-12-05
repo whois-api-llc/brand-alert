@@ -1,12 +1,11 @@
 # Making a query to Brand Alert API web service
 
-[WhoisXmlApi.com](https://www.whoisxmlapi.com/) has been gathering domain
-Whois records for almost all gTLDs and ccTLDs for over a decade.
-This data is unified, consistent, well parsed, and accurate and provided
-through real-time APIs.
+[Brand Alert API](https://www.whoisxmlapi.com/brand-alert-api.php) searches 
+across all recently registered and deleted domain names, and returns result 
+sets consisting of domain names that contain term(s) that are specified by you.
 
-Here you'll find examples of using
-[www.whoisxmlapi.com](https://www.whoisxmlapi.com/) Hosted Brand Alert Web API
+Here you'll find examples of using Hosted
+[Brand Alert](https://www.whoisxmlapi.com/brand-alert-api.php) Web API
 implemented in multiple languages.
 
 Please, refer to
