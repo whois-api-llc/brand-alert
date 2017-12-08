@@ -13,11 +13,11 @@ import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
-public class BrandAlertApiQuery {
+public class BrandAlertSample {
     public static void main(String[]args){
         String API_URL="https://www.whoisxmlapi.com/brand-alert-api/search.php";
 
-        String username="Your brand alert api username", password="Your brand alert api password";
+        String username="Your_brand_alert_api_username", password="Your_brand_alert_api_password";
 
         String term1 = "cinema";
         String term2 = "club";
@@ -58,7 +58,7 @@ public class BrandAlertApiQuery {
         } catch (ParserConfigurationException ex) {
             ex.printStackTrace();;
         } catch (IOException ex) {
-           ex.printStackTrace();
+            ex.printStackTrace();
         } finally{
             if(httpclient!=null)httpclient.getConnectionManager().shutdown();
         }
