@@ -1,13 +1,14 @@
 <?php
 
-    $terms = 'cinema';
-    $password = 'Your brand alert api password';
-    $username = 'Your brand alert api username';
-    $rows = '5';
+$terms = 'test';
+$username = 'Your brand alert api username';
+$password = 'Your brand alert api password';
+$rows = '10';
 
-    $url = "https://www.whoisxmlapi.com/brand-alert-api/search.php?"
-        . "term1={$terms}&username={$username}&password={$password}&rows={$rows}";
+$url = 'https://www.whoisxmlapi.com/brand-alert-api/search.php'
+     . '?term1=' . urlencode($terms)
+     . '&username=' . urlencode($username)
+     . '&password=' . urlencode($password)
+     . '&rows=' . urlencode($rows);
 
-    print(file_get_contents($url));
-
-?>
+print(file_get_contents($url) . PHP_EOL);

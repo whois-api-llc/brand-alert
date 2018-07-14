@@ -1,26 +1,37 @@
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="text/javascript">
-    //     Fill in your details
-    var username = "Your brand alert api username";
-    var password = "Your brand alert api password";
-    var term1 = "cinema";
-    var format = "JSON";
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brand Alert API jQuery Search Sample</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
 
-    window.addEventListener("load", onPageLoad, false);
+        var url = "https://www.whoisxmlapi.com/brand-alert-api/search.php";
+        // Fill in your details
+        var username = "Your brand alert api username";
+        var password = "Your brand alert api password";
+        var term1 = "cinema";
+        var format = "json";
 
-    function onPageLoad() {
-        $.ajax({
-            url: "https://www.whoisxmlapi.com/brand-alert-api/search.php?",
-            dataType: "json",
-            data: {
-                term1: term1,
-                username: username,
-                password: password,
-                outputFormat: format
-            },
-            success: function(data) {
-                $("body").append("<pre>"+ JSON.stringify(data,"",2)+"</pre>");
-            }
+        $(function() {
+            $.ajax(
+                {
+                    url: url,
+                    dataType: "jsonp",
+                    data: {
+                        term1: term1,
+                        username: username,
+                        password: password,
+                        output_format: format
+                    },
+                    success: function(data) {
+                        $("body").append(
+                            "<pre>" + JSON.stringify(data,null,2) + "</pre>");
+                    }
+                }
+            );
         });
-    }
-</script>
+
+    </script>
+</head>
+<body></body>
+</html>
